@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drag and Drop</title>
+  <style>
+    .container {
+      display: flex;
+    }
+
+    .item {
+      width: 70px;
+      height: 70px;
+      background-color: #0b2b9e;
+      margin: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .item.dragging {
+      opacity: 0.5;
+    }
+
+    .dropzone {
+      width: 200px;
+      height: 300px;
+      border: 2px dashed #2865f1;
+      background-color: aqua;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .success-message {
+      color: green;
+      margin-top: 10px;
+    }
+    .btn{
+        width: 11vmax;
+    padding: 0.6vmax;
+    margin-left: 2%;
+    border-radius: 2vmax;
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    cursor: pointer;
+        
+    }
+    .btn:hover{
+        background-color: rgb(177, 23, 54);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="dropzone" id="first-container">
+      <div class="item" draggable="true">Item 1</div>
+      <div class="item" draggable="true">Item 2</div>
+      <div class="item" draggable="true">Item 3</div>
+    </div>
+    <div class="dropzone" id="second-container"></div>
+  </div>
+
+  <button class="btn" onclick="resetContainers()">Reset</button>
+  
+  <script src="script.js"></script>
+</body>
+</html>
